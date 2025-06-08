@@ -1,0 +1,10 @@
+{
+  "appId": "com.app.transporthelper",
+  "appName": "transport-helper",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}
