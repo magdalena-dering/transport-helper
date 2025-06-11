@@ -1,10 +1,18 @@
 import { CapacitorInit } from "@/components/CapacitorInit";
+const NIP24 = require('nip24client')
+const nip24 = new NIP24.NIP24Client()
 
+const getCompanyData = async () => await nip24.getAllDataExt(NIP24.Number.NIP, '7272445205')
 
-export default function Home() {
+const Home = async () => {
+  const companyData = await getCompanyData()
+  console.log('companyData', companyData);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="">
       <CapacitorInit />
     </div>
   );
 }
+
+export default Home
