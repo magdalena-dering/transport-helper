@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect } from 'react'
 import { Capacitor } from '@capacitor/core'
+import { useEffect } from 'react'
 
 export const CapacitorInit = () => {
     useEffect(() => {
